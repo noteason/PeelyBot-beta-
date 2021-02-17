@@ -178,7 +178,7 @@ client = commands.Bot(
         delete_existing_device_auths=True,
         **device_auth_details,
     ),
-    platform=fortnitepy.Platform.XBOX_X,
+    platform=fortnitepy.Platform.PLAYSTATION_5,
 )
 client.sanic_app = sanic_app
 client.server = server
@@ -214,7 +214,7 @@ async def event_ready():
         partial(
             fortnitepy.ClientPartyMember.set_banner,
             icon='brseason01',
-            color='defaultcolor2',
+            color='defaultcolor14',
             season_level='100',
         ),
         partial(
@@ -335,7 +335,7 @@ async def event_party_member_confirm(confirmation: fortnitepy.PartyJoinConfirmat
 async def event_party_member_join(member: fortnitepy.PartyMember) -> None:
     
     await client.party.send(
-        f" Welcome {member.display_name}, \n Made with PeelyBot by noteason \n Youtube: noteason to get your bot \n Join https://discord.gg/dBnAjActCd for help!"
+        f" Welcome {member.display_name}, \n Made with PeelyBot by noteason \n TikTok: noteason  \n Join https://discord.gg/dBnAjActCd for help!"
     )
     await client.party.me.set_emote(asset="EID_Psychic_7SO2Z")
     await asyncio.sleep(37.02)
@@ -658,6 +658,18 @@ async def renegade2(ctx):
 
     await ctx.send('Skin set to: Checkered Renegade')
     await ctx.send('To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/dBnAjActCd \n2)YouTube: noteason\n3) TikTok: noteason\n4) Instagram: tiktoknoteason\nMade with PeelyBot!')    
+
+@client.command()
+async def wildcat(ctx):
+    variants = client.party.me.create_variants(material=3)
+
+    await client.party.me.set_outfit(
+        asset='CID_757_Athena_Commando_F_WildCat',
+        variants=variants
+    )
+
+    await ctx.send('Skin set to: Wildcat Blue Style')
+    await ctx.send('To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/dBnAjActCd \n2)YouTube: noteason\n3) TikTok: noteason\n4) Instagram: tiktoknoteason\nMade with PeelyBot!')
     
     
     
@@ -817,7 +829,7 @@ async def s2(ctx):
       await asyncio.sleep(2)
       await client.party.me.set_emote(asset="EID_Floss")
       await asyncio.sleep(5)
-      await ctx.send(f"To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/rAd9YnHjV3 \n2)YouTube: Ghost Leaks\n3) TikTok: Ghost_Leaks\n4) Instagram: ghost__leaks\nMade with GhostFN!")
+      await ctx.send(f"hi")
       await client.party.me.set_emote(asset="EID_Dab")
       await ctx.send(
         f"S2 reel"
@@ -1224,7 +1236,7 @@ async def zerotwo(ctx):
     await client.party.me.set_outfit(asset="CID_753_Athena_Commando_F_Hostile")
     await client.party.me.set_backpack(asset="bid_600_CID")
     await client.party.me.set_emote(asset="EID_KpopDance04")
-    await ctx.send('ZeroTwo is really an important memory for GhostLeaks and I think his story is an example for everyone...')    
+    await ctx.send('WUT')    
 
 @client.command()
 async def fruit(ctx):
@@ -2063,7 +2075,7 @@ async def level(ctx, level = None):
         await client.party.me.set_banner(season_level=level)
         await ctx.send(f'Level set to: {level}')
 
-client.status = 'Made with PeelyBot | by noteason '
+client.status = '😊FOLLOW NOTEASON ON TIKTOK🥳'
 
 @client.command()
 async def og(ctx):

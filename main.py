@@ -335,7 +335,7 @@ async def event_party_member_confirm(confirmation: fortnitepy.PartyJoinConfirmat
 async def event_party_member_join(member: fortnitepy.PartyMember) -> None:
     
     await client.party.send(
-        f" Welcome {member.display_name}, \n Made with PeelyBot by noteason \n TikTok: noteason  \n Join https://discord.gg/dBnAjActCd for help!"
+        f" Welcome {member.display_name},    Heyy :bruh)                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason"
     )
     await client.party.me.set_emote(asset="EID_Psychic_7SO2Z")
     await asyncio.sleep(37.02)
@@ -421,7 +421,7 @@ async def event_party_member_confirm(confirmation):
 @client.event
 async def event_party_member_leave(member):
     
-    await client.party.set_privacy(fortnitepy.PartyPrivacy.PUBLIC)
+    await client.party.set_privacy(fortnitepy.PartyPrivacy.PRIVATE)
     if client.user.display_name != member.display_name:
         try:
             print(
@@ -500,7 +500,7 @@ async def event_command_error(ctx, error):
 
 @client.command()
 async def noteason(ctx):
-    await ctx.send('With PeelyBot by noteason you can easly create your own lobby bot in less than 5 minutes!')
+    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
     
      
     
@@ -634,7 +634,7 @@ async def pinkghoul(ctx):
     )
 
     await ctx.send('Skin set to: Pink ghoul')
-    await ctx.send('To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/dBnAjActCd \n2)YouTube: noteason\n3) TikTok: noteason\n4) Instagram: tiktoknoteason\nMade with PeelyBot!')
+    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
 @client.command()
 async def purpleskull(ctx):
     variants = client.party.me.create_variants(clothing_color=1)
@@ -645,7 +645,7 @@ async def purpleskull(ctx):
     )
 
     await ctx.send('Skin set to: purple skull')
-    await ctx.send('To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/dBnAjActCd \n2)YouTube: noteason\n3) TikTok: noteason\n4) Instagram: tiktoknoteason\nMade with PeelyBot!')
+    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
     
 @client.command()
 async def renegade2(ctx):
@@ -657,7 +657,7 @@ async def renegade2(ctx):
     )
 
     await ctx.send('Skin set to: Checkered Renegade')
-    await ctx.send('To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/dBnAjActCd \n2)YouTube: noteason\n3) TikTok: noteason\n4) Instagram: tiktoknoteason\nMade with PeelyBot!')    
+    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')    
 
 @client.command()
 async def wildcat(ctx):
@@ -669,7 +669,19 @@ async def wildcat(ctx):
     )
 
     await ctx.send('Skin set to: Wildcat Blue Style')
-    await ctx.send('To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/dBnAjActCd \n2)YouTube: noteason\n3) TikTok: noteason\n4) Instagram: tiktoknoteason\nMade with PeelyBot!')
+    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
+
+@client.command()
+async def jade(ctx):
+    variants = client.party.me.create_variants(material=2)
+
+    await client.party.me.set_outfit(
+        asset='CID_545_Athena_Commando_F_SushiNinja',
+        variants=variants
+    )
+
+    await ctx.send('Skin set to: Red Jade Blue Style')
+    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')  
     
     
     
@@ -735,7 +747,7 @@ async def defaults(ctx):
     await ctx.send(
         f"There was all defaults! "
     )
-    await ctx.send('To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/dBnAjActCd \n2)YouTube: noteason\n3) TikTok: noteason\n4) Instagram: tiktoknoteason\nMade with PeelyBot!')
+    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
 @client.command()
 async def exclusive(ctx):
       await ctx.send(f"Exclusive skins..")
@@ -771,7 +783,7 @@ async def exclusive(ctx):
       await asyncio.sleep(2)
       await client.party.me.set_emote(asset="EID_MathDance")
       await asyncio.sleep(7)
-      await ctx.send(f"To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/dBnAjActCd \n2)YouTube: noteason\n3) TikTok: noteason\n4) Instagram: tiktoknoteason\nMade with PeelyBot!")
+      await ctx.send(f"                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason")
       await client.party.me.set_outfit(asset="CID_371_Athena_Commando_M_SpeedyMidnight")
       await asyncio.sleep(2)
       await client.party.me.set_emote(asset="EID_LasagnaDance")
@@ -808,7 +820,7 @@ async def exclusive(ctx):
       await ctx.send(
         f"There was all exclusive!"
     ) 
-      await ctx.send('To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/dBnAjActCd \n2)YouTube: noteason\n3) TikTok: noteason\n4) Instagram: tiktoknoteason\nMade with PeelyBot!')
+      await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
 
 @client.command()
 async def s2(ctx):
@@ -858,7 +870,7 @@ async def s1(ctx):
       await asyncio.sleep(2)
       await client.party.me.set_emote(asset="EID_ElectroShuffle")
       await asyncio.sleep(5)
-      await ctx.send(f"To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/dBnAjActCd \n2)YouTube: noteason\n3) TikTok: noteason\n4) Instagram: tiktoknoteason\nMade with PeelyBot!")
+      await ctx.send(f"                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason")
       await client.party.me.set_emote(asset="EID_Dab")
       await ctx.send(
         f"S1 reel"
@@ -891,7 +903,7 @@ async def s3(ctx):
       await asyncio.sleep(2)
       await client.party.me.set_emote(asset="EID_TakeTheL")
       await asyncio.sleep(5)
-      await ctx.send(f"To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/dBnAjActCd \n2)YouTube: noteason\n3) TikTok: noteason\n4) Instagram: tiktoknoteason\nMade with PeelyBot!")
+      await ctx.send(f"                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason")
       await client.party.me.set_emote(asset="EID_Dab")
       await ctx.send(
         f"S3 reel"
@@ -933,7 +945,7 @@ async def zombie(ctx):
     await ctx.send(
         f"Zombie skins! "
     )
-    await ctx.send('To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/dBnAjActCd \n2)YouTube: noteason\n3) TikTok: noteason\n4) Instagram: tiktoknoteason\nMade with PeelyBot!')
+    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
 @client.command()
 async def soccer(ctx):
     await client.party.me.set_outfit(asset="cid_144_athena_commando_m_soccerdudea")
@@ -968,7 +980,7 @@ async def soccer(ctx):
     await client.party.me.set_emote(asset="eid_soccerjuggling")
     await asyncio.sleep(2.25)
     await client.party.me.clear_emote()
-    await ctx.send('To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/dBnAjActCd \n2)YouTube: noteason\n3) TikTok: noteason\n4) Instagram: tiktoknoteason\nMade with PeelyBot!')
+    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
  
 @client.command()
 async def randomize(ctx):
@@ -1224,7 +1236,7 @@ async def randomize(ctx):
       await ctx.send(
         f"Stopped!"
     ) 
-      await ctx.send('To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/dBnAjActCd \n2)YouTube: noteason\n3) TikTok: noteason\n4) Instagram: tiktoknoteason\nMade with PeelyBot!')
+      await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
 
 @client.command()
 async def ecu(ctx):
@@ -1526,7 +1538,7 @@ async def marvel(ctx):
     await ctx.send(
         f"All the marvel skins! "
     )
-    await ctx.send('To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/dBnAjActCd \n2)YouTube: noteason\n3) TikTok: noteason\n4) Instagram: tiktoknoteason\nMade with PeelyBot!')
+    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
 @client.command()
 async def name(ctx, *, content=None):
     if content is None:
@@ -1975,7 +1987,7 @@ async def itemshop(ctx):
 
     await client.party.me.clear_emote()
     
-    await ctx.send("To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/dBnAjActCd \n2)YouTube: noteason\n3) TikTok: noteason\n4) Instagram: tiktoknoteason\nMade with PeelyBot!")
+    await ctx.send("                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason")
 
     await asyncio.sleep(1.5)
 
@@ -2115,7 +2127,7 @@ async def og(ctx):
         f"Season one og skins "
      )
     await ctx.send(
-      f"To get your OWN Lobby Bot: \n1) Join our Discord at: https://discord.gg/dBnAjActCd \n2)YouTube: noteason\n3) TikTok: noteason\n4) Instagram: tiktoknoteason\nMade with PeelyBot!"
+      f"                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason"
      )
 
 @client.command()

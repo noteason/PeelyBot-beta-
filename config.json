@@ -1,12 +1,19 @@
 {
-    "email": "NOTEASON@EMAIL.COM",
-    "password": "PASSWORD",
+    "email": "noteason@fakeemail.com",
+    "password": "69696969696969",
     "cid": "CID_039_Athena_Commando_F_Disco",
-    "bid": "bid_138_celestial",
+    "avatar": "cid_313_athena_commando_m_kpopfashion",
+    "bid": "bid_004_blackknight",
     "pid": "Pickaxe_Lockjaw",
-    "prefix": "!",
+    "banner": "Brseason01",
+    "banner_color": "defaultcolor2",
+    "level": "100",
+    "bp_tier": "100",
+    "prefix": "n!",
+    "platform": "XBL",
     "playlist": "Playlist_Lite_Solo",
     "friendaccept": "true",
     "joinoninvite": "false",
-    "AdminPassword": "1234"
+    "AdminPassword": "SIRKAPS PP"
 }
+

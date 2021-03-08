@@ -213,20 +213,20 @@ async def event_ready():
         partial(fortnitepy.ClientPartyMember.set_pickaxe, asset=data["pid"]),
         partial(
             fortnitepy.ClientPartyMember.set_banner,
-            icon='brseason01',
-            color='defaultcolor14',
-            season_level='100',
+            icon=data["banner"],
+            color=data["banner_color"],
+            season_level=data["level"],
         ),
         partial(
             fortnitepy.ClientPartyMember.set_battlepass_info,
             has_purchased=True,
-            level='100',
+            level=data["bp_tier"],
         ),
     )
 
     client.set_avatar(
         fortnitepy.Avatar(
-            asset='cid_313_athena_commando_m_kpopfashion', background_colors=["#8B008B", "#8B008B", "#8B008B"]
+            asset=data["avatar"], background_colors=["#8B008B", "#8B008B", "#8B008B"]
         )
     )
     client.message='test'
@@ -335,9 +335,9 @@ async def event_party_member_confirm(confirmation: fortnitepy.PartyJoinConfirmat
 async def event_party_member_join(member: fortnitepy.PartyMember) -> None:
     
     await client.party.send(
-        f" Welcome {member.display_name},    Heyy :bruh)                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason"
+        f" \n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason"
     )
-    await client.party.me.set_emote(asset="EID_Psychic_7SO2Z")
+    await client.party.me.set_emote(asset="EID_IndigoApple")
     await asyncio.sleep(37.02)
     await client.party.me.clear_emote()
     await client.party.set_privacy(fortnitepy.PartyPrivacy.PUBLIC)
@@ -500,7 +500,7 @@ async def event_command_error(ctx, error):
 
 @client.command()
 async def noteason(ctx):
-    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
+    await ctx.send('\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason')
     
      
     
@@ -634,7 +634,7 @@ async def pinkghoul(ctx):
     )
 
     await ctx.send('Skin set to: Pink ghoul')
-    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
+    await ctx.send('\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason')
 @client.command()
 async def purpleskull(ctx):
     variants = client.party.me.create_variants(clothing_color=1)
@@ -645,7 +645,7 @@ async def purpleskull(ctx):
     )
 
     await ctx.send('Skin set to: purple skull')
-    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
+    await ctx.send('\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason')
     
 @client.command()
 async def renegade2(ctx):
@@ -657,7 +657,7 @@ async def renegade2(ctx):
     )
 
     await ctx.send('Skin set to: Checkered Renegade')
-    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')    
+    await ctx.send('\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason')    
 
 @client.command()
 async def wildcat(ctx):
@@ -669,7 +669,7 @@ async def wildcat(ctx):
     )
 
     await ctx.send('Skin set to: Wildcat Blue Style')
-    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
+    await ctx.send('\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason')
 
 @client.command()
 async def jade(ctx):
@@ -681,7 +681,7 @@ async def jade(ctx):
     )
 
     await ctx.send('Skin set to: Red Jade Blue Style')
-    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')  
+    await ctx.send('\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason')  
     
     
     
@@ -747,7 +747,7 @@ async def defaults(ctx):
     await ctx.send(
         f"There was all defaults! "
     )
-    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
+    await ctx.send('\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason')
 @client.command()
 async def exclusive(ctx):
       await ctx.send(f"Exclusive skins..")
@@ -783,7 +783,7 @@ async def exclusive(ctx):
       await asyncio.sleep(2)
       await client.party.me.set_emote(asset="EID_MathDance")
       await asyncio.sleep(7)
-      await ctx.send(f"                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason")
+      await ctx.send(f"\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason")
       await client.party.me.set_outfit(asset="CID_371_Athena_Commando_M_SpeedyMidnight")
       await asyncio.sleep(2)
       await client.party.me.set_emote(asset="EID_LasagnaDance")
@@ -820,7 +820,7 @@ async def exclusive(ctx):
       await ctx.send(
         f"There was all exclusive!"
     ) 
-      await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
+      await ctx.send('\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason')
 
 @client.command()
 async def s2(ctx):
@@ -870,7 +870,7 @@ async def s1(ctx):
       await asyncio.sleep(2)
       await client.party.me.set_emote(asset="EID_ElectroShuffle")
       await asyncio.sleep(5)
-      await ctx.send(f"                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason")
+      await ctx.send(f"\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason")
       await client.party.me.set_emote(asset="EID_Dab")
       await ctx.send(
         f"S1 reel"
@@ -903,7 +903,7 @@ async def s3(ctx):
       await asyncio.sleep(2)
       await client.party.me.set_emote(asset="EID_TakeTheL")
       await asyncio.sleep(5)
-      await ctx.send(f"                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason")
+      await ctx.send(f"\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason")
       await client.party.me.set_emote(asset="EID_Dab")
       await ctx.send(
         f"S3 reel"
@@ -945,7 +945,7 @@ async def zombie(ctx):
     await ctx.send(
         f"Zombie skins! "
     )
-    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
+    await ctx.send('\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason')
 @client.command()
 async def soccer(ctx):
     await client.party.me.set_outfit(asset="cid_144_athena_commando_m_soccerdudea")
@@ -980,7 +980,7 @@ async def soccer(ctx):
     await client.party.me.set_emote(asset="eid_soccerjuggling")
     await asyncio.sleep(2.25)
     await client.party.me.clear_emote()
-    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
+    await ctx.send('\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason')
  
 @client.command()
 async def randomize(ctx):
@@ -1236,7 +1236,7 @@ async def randomize(ctx):
       await ctx.send(
         f"Stopped!"
     ) 
-      await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
+      await ctx.send('\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason')
 
 @client.command()
 async def ecu(ctx):
@@ -1538,7 +1538,7 @@ async def marvel(ctx):
     await ctx.send(
         f"All the marvel skins! "
     )
-    await ctx.send('                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason')
+    await ctx.send('\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason')
 @client.command()
 async def name(ctx, *, content=None):
     if content is None:
@@ -1987,7 +1987,7 @@ async def itemshop(ctx):
 
     await client.party.me.clear_emote()
     
-    await ctx.send("                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason")
+    await ctx.send("\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason")
 
     await asyncio.sleep(1.5)
 
@@ -2127,7 +2127,7 @@ async def og(ctx):
         f"Season one og skins "
      )
     await ctx.send(
-      f"                                                                                                                                For your own bot:                                                                                                                                : Youtube: NOTEASON                                                                                                                                - TikTok: NOTEASON                                                                                                                                -Instagram: TIKTOKNOTEASON                                                                                                                                -SUPPORT A CREATOR: TikTokNotEason"
+      f"\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason"
      )
 
 @client.command()

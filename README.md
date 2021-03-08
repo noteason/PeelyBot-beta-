@@ -10,3 +10,4 @@ HOW TO START THE BOT:
 3.bot will be online
 
 4. if you need any help go to my tiktok and click the discord server in my bio enjoy:)
+5. MOST CREDITS GO TO GHOSTLEAKS FOR MAKING MOST OF THE CODE

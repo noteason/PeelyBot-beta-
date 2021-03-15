@@ -112,11 +112,11 @@ def getNewEmotes():
 
 
 def get_device_auth_details():
-    if os.path.isfile("auths.json"):
-        with open("auths.json", "r") as fp:
+    if os.path.isfile("bot/loginstuff.json"):
+        with open("bot/loginstuff.json", "r") as fp:
             return json.load(fp)
     else:
-        with open("auths.json", "w+") as fp:
+        with open("bot/loginstuff.json", "w+") as fp:
             json.dump({}, fp)
     return {}
 
@@ -125,11 +125,11 @@ def store_device_auth_details(email, details):
     existing = get_device_auth_details()
     existing[email] = details
 
-    with open("auths.json", "w") as fp:
+    with open("bot/loginstuff.json", "w") as fp:
         json.dump(existing, fp)
 
 
-with open("config.json") as f:
+with open("settings_for_bot.json") as f:
     try:
         data = json.load(f)
     except json.decoder.JSONDecodeError as e:
@@ -137,13 +137,13 @@ with open("config.json") as f:
             Fore.RED
             + " [ERROR] "
             + Fore.RESET
-            + "There was an error in one of the bot's files! (config.json). Thx for using noteasons Peely Bot!  here if you need help or found any bugs\n https://instagram.com/@tiktoknoteason"
+            + "There was an error in one of the bot's files! (Settings_for_bot.json). Thx for using noteasons Peely Bot!  here if you need help or found any bugs\n https://instagram.com/@tiktoknoteason"
         )
         print(Fore.LIGHTRED_EX + f"\n {e}")
         exit(1)
 
 
-with open("info.json") as f:
+with open("bot/admin.json") as f:
     try:
         info = json.load(f)
     except json.decoder.JSONDecodeError as e:
@@ -151,7 +151,7 @@ with open("info.json") as f:
             Fore.RED
             + " [ERROR] "
             + Fore.RESET
-            + "There was an error in one of the bot's files! (info.json) Thx for using noteasons Peely Bot!  here if you need help or found any bugs\n https://instagram.com/@tiktoknoteason"
+            + "There was an error in one of the bot's files! (bot/admin.json) Thx for using noteasons Peely Bot!  here if you need help or found any bugs\n https://instagram.com/@tiktoknoteason"
         )
         print(Fore.LIGHTRED_EX + f"\n {e}")
         exit(1)
@@ -665,6 +665,18 @@ async def wildcat(ctx):
 
     await client.party.me.set_outfit(
         asset='CID_757_Athena_Commando_F_WildCat',
+        variants=variants
+    )
+
+    await ctx.send('Skin set to: Wildcat Blue Style')
+    await ctx.send('\n TikTok: NotEason \n YouTube: NotEason \n Instagram: TikTokNotEason')
+
+@client.command()
+async def goldgirl(ctx):
+    variants = client.party.me.create_variants(material=2)
+
+    await client.party.me.set_outfit(
+        asset='CID_A_034_Athena_Commando_F_CatBurglar',
         variants=variants
     )
 
@@ -2377,7 +2389,7 @@ async def admin(ctx, setting = None, *, user = None):
                 content = response.content.lower()
                 if content == data['AdminPassword']:
                     info['FullAccess'].append(user.id)
-                    with open('info.json', 'w') as f:
+                    with open('bot/admin.json', 'w') as f:
                         json.dump(info, f, indent=4)
                         await ctx.send(f"Correct. Added {user.display_name} as an admin.")
                         print(Fore.GREEN + " [+] " + Fore.LIGHTGREEN_EX + user.display_name + Fore.RESET + " was added as an admin.")
@@ -2393,7 +2405,7 @@ async def admin(ctx, setting = None, *, user = None):
                 content = response.content.lower()
                 if (content.lower() == 'yes') or (content.lower() == 'y'):
                     info['FullAccess'].remove(user.id)
-                    with open('info.json', 'w') as f:
+                    with open('bot/admin.json', 'w') as f:
                         json.dump(info, f, indent=4)
                         await ctx.send("You were removed as an admin.")
                         print(Fore.BLUE + " [+] " + Fore.LIGHTBLUE_EX + user.display_name + Fore.RESET + " was removed as an admin.")
@@ -2428,7 +2440,7 @@ async def admin(ctx, setting = None, *, user = None):
             if ctx.message.author.id in info['FullAccess']:
                 if user.id not in info['FullAccess']:
                     info['FullAccess'].append(user.id)
-                    with open('info.json', 'w') as f:
+                    with open('bot/admin.json', 'w') as f:
                         json.dump(info, f, indent=4)
                         await ctx.send(f"Correct. Added {user.display_name} as an admin.")
                         print(Fore.GREEN + " [+] " + Fore.LIGHTGREEN_EX + user.display_name + Fore.RESET + " was added as an admin.")
@@ -2444,7 +2456,7 @@ async def admin(ctx, setting = None, *, user = None):
                     content = response.content.lower()
                     if content == data['AdminPassword']:
                         info['FullAccess'].remove(user.id)
-                        with open('info.json', 'w') as f:
+                        with open('bot/admin.json', 'w') as f:
                             json.dump(info, f, indent=4)
                             await ctx.send(f"{user.display_name} was removed as an admin.")
                             print(Fore.BLUE + " [+] " + Fore.LIGHTBLUE_EX + user.display_name + Fore.RESET + " was removed as an admin.")

@@ -5,7 +5,7 @@ app = Flask('')
 
 @app.route('/')
 def main():
-    return "PeelyBot Made By NotEason And Ghost Leaks | Project running!"
+    return "PROJECT RUNNING!"
 
 def run():
     app.run(host="0.0.0.0", port=8080)
